@@ -1,3 +1,25 @@
+# Installation Instructions
+
+To use this package, you'll need to import it using the following method:
+
+1. First, download the `DTMC_0.9.1.zip` file and save it to a location on your computer.
+2. Then, run the following R code to install and load the package:
+
+```R
+# Replace this with the path where you've saved the DTMC_0.9.1.zip file
+path <- '...\'
+
+# Construct the full path to the ZIP file
+pkgfile.zip <- paste0(path, 'DTMC_0.9.1.zip')
+
+# Install the package
+install.packages(pkgfile.zip, repos = NULL, type = "win.binary")
+
+# Load the package
+library(DTMC)
+```
+
+
 # Discrete Time Markov Chain
 
 Consider a process that has a value in each time period. Let
