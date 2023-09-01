@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Calculating probability when the absorbing state is known...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for Abprob {DTMC}"><tr><td>Abprob {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Calculating  probability when the absorbing state is known
+Calculate the conditional probability of transferring n steps from state i to state j, given never entering absorb state in this n steps.
+In real life, there may be known discrete Markov chains that never enter a state k1, k2...  This function can help calculate the conditional probability of moving from state i to state j in n steps in this case.  All we need to do is considering the states k1,k2... as absorbing state to put into this function and enter the transition matrix P and state i and state j.  The function outputs the final probability. If absorbing state contain state i or j, the function will return the probability of having entered the absorbing states in these n steps.</h2>
+
+<h3>Description</h3>
+
+<p>Calculating  probability when the absorbing state is known
+Calculate the conditional probability of transferring n steps from state i to state j, given never entering absorb state in this n steps.
+In real life, there may be known discrete Markov chains that never enter a state k1, k2...  This function can help calculate the conditional probability of moving from state i to state j in n steps in this case.  All we need to do is considering the states k1,k2... as absorbing state to put into this function and enter the transition matrix P and state i and state j.  The function outputs the final probability. If absorbing state contain state i or j, the function will return the probability of having entered the absorbing states in these n steps.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Abprob(P, Abstate, i, j, n = 1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>transition matrix</p>
+</td></tr>
+<tr valign="top"><td><code>Abstate</code></td>
+<td>
+<p>a vector contain all absorbing state colunm numbers</p>
+</td></tr>
+<tr valign="top"><td><code>i</code></td>
+<td>
+<p>initial state column number</p>
+</td></tr>
+<tr valign="top"><td><code>j</code></td>
+<td>
+<p>terminal state column number</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>Number of transfer steps. the default value is 1</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>the conditional probability of transferring n steps from state i to state j, given never entering absorb state in this n steps
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+prob &lt;- Abprob(P, Abstate = c(3), i = 1, j = 2, n = 5)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

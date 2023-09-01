@@ -1,0 +1,19 @@
+Package: DTMC
+Type: Package
+Title: Introduce some discrete Markov chain methods to analyze a
+        stochastic process
+Version: 0.9.1
+Author: Xinyang, Wang <119020054@link.cuhk.edu.cn>, Yongyue, Liu <119020309@link.cuhk.edu.cn> and Ziqi, Liao <119020286@link.cuhk.edu.cn>
+Maintainer: Yongyue, Liu <119020309@link.cuhk.edu.cn>
+Description: This package introduces some methods to analyze some properties of discrete time Markov chain,
+    including Chapman-Kolmogorov equations, classification of states, Long-run Proportions, Stationary Probability,
+    Limiting Probability, Time Reversiblilty and so on. These methods can be used to describe the characteristics of
+    a stochastic process with Markov property.
+Depends: R (>= 4.0.0)
+Imports: expm, igraph, stats
+License: GPL (>= 3)
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+Suggests: rmarkdown, knitr
+VignetteBuilder: knitr
+Built: R 4.1.1; ; 2023-09-01 18:09:45 UTC; windows

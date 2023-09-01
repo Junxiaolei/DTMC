@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Champman-Kolmogorov Equations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for CKequ {DTMC}"><tr><td>CKequ {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Champman-Kolmogorov Equations</h2>
+
+<h3>Description</h3>
+
+<p>Calculate the transition probability from one state to another state.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+CKequ(P, i, j, n)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>The transition probability matrix</p>
+</td></tr>
+<tr valign="top"><td><code>i</code></td>
+<td>
+<p>The starting state</p>
+</td></tr>
+<tr valign="top"><td><code>j</code></td>
+<td>
+<p>The ending state</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>The number of steps</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The input matrix should be a transition probability matrix of discrete time Markov chain, the starting and ending states should be numerical values within the range of row(column) indices, and the step is the number of periods during the process.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The probability from state i to state j in n steps
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+prob &lt;- CKequ(P = P, i = 1, j = 3, n = 2)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

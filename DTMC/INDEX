@@ -1,0 +1,44 @@
+Abprob                  Calculating probability when the absorbing
+                        state is known Calculate the conditional
+                        probability of transferring n steps from state
+                        i to state j, given never entering absorb state
+                        in this n steps. In real life, there may be
+                        known discrete Markov chains that never enter a
+                        state k1, k2...  This function can help
+                        calculate the conditional probability of moving
+                        from state i to state j in n steps in this
+                        case.  All we need to do is considering the
+                        states k1,k2... as absorbing state to put into
+                        this function and enter the transition matrix P
+                        and state i and state j.  The function outputs
+                        the final probability. If absorbing state
+                        contain state i or j, the function will return
+                        the probability of having entered the absorbing
+                        states in these n steps.
+CKequ                   Champman-Kolmogorov Equations
+DTMC                    DTMC: A package for finite discrete markov
+                        chain to solve stochastic problems.
+LongRunP                Long-run proportion
+RevChain                Get the reversed Markov chain
+TranTime                Mean time spent in transient states
+class_info              Get class information
+classify                Classification of a class of states
+expect_DTMC             Compute the expectation.
+get_graph               Get the corresponding graph
+is.DTMC                 Check whether the matrix is valid
+is.accessible           Check the accessibility of the state
+is.class                Class Check
+is.communicate          Check the communicativeness of the state Check
+                        whether state i and state j are communicative.
+                        That state i and state j are communicative
+                        means that there is a step from state i that is
+                        possible to move to state j and there is a step
+                        from state j that is possible to move to state
+                        i. The state i should not equal to state j. If
+                        you want to verify that a state can return to
+                        itself, call 'class_info()' to verify that the
+                        state is transient.
+isTReversible           Judge whether the Markov chain is time
+                        reversible
+plot_graph              Plot a graph
+runif_DTMC              Create a transition matrix randomly.

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Long-run proportion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for LongRunP {DTMC}"><tr><td>LongRunP {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Long-run proportion</h2>
+
+<h3>Description</h3>
+
+<p>Calculate the long-run probability of each state if the Markov chain is irreducible and recurrent.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+LongRunP(P, sign = F)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>The transition probability matrix</p>
+</td></tr>
+<tr valign="top"><td><code>sign</code></td>
+<td>
+<p>If the transition matrix being time reversible has been known, sign is TRUE; otherwise sign is FALSE</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>To calculate the long-run proportion, since there are finite states, the Markov chain must be irreducible and recurrent. If those conditions are satisfied, the function will return a vector of stationary probabilities for each state, otherwise there will be no result.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A vector of long-run probabilities of each state or NA if probabilities do not exist
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+LRp &lt;- LongRunP(P = P, sign = TRUE)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

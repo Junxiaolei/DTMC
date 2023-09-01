@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Get class information</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for class_info {DTMC}"><tr><td>class_info {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Get class information</h2>
+
+<h3>Description</h3>
+
+<p>Get class information of a whole discrete time Markov chains
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+class_info(P)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>the whole transition matrix P</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The user needs to input the whole transition matrix, and this function can generate all the classification information of the discrete time Markov chain, including the column number of the state contained by each class after classification, the corresponding block transition matrix of each class, the classification of each class and a vector contain the group number of each state in order. This information is contained in a list.
+</p>
+
+
+<h3>Value</h3>
+
+<p>return a list
+</p>
+
+<ol>
+<li><p>  list$states contains the column number of the state contained by each class after classification
+</p>
+</li>
+<li><p>  list$prob_martix contains the corresponding block transition matrix of each class
+</p>
+</li>
+<li><p>  list$class contains the classification of each class
+</p>
+</li>
+<li><p>  list$group a vector contain the group number of each state in order
+</p>
+</li></ol>
+
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0, 1), byrow = TRUE, nrow = 3)
+class_info(P)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

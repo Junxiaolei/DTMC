@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Class Check</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for is.class {DTMC}"><tr><td>is.class {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Class Check</h2>
+
+<h3>Description</h3>
+
+<p>Check if some states are in the same class
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+is.class(P, states = NA)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>transition matrix P or a block matrix P of the whole transition matrix</p>
+</td></tr>
+<tr valign="top"><td><code>states</code></td>
+<td>
+<p>a vector contain all state column number. The default value is <code>NA</code>. If states is <code>NA</code>, this is equivalent to entering all the state column numbers</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>State in the same class means that they can all communicate with each other. You can input transition matrix P or block matrix P of the whole transition matrix, and states is a vector contain all state column number of that you want to check. If you do not enter the parameter &quot;states&quot;, it will enter <code>NA</code>, meaning that the function will check whether all states in P are in the same class. It is worth mentioning that if P is the entire transition matrix and states is <code>NA</code>, then this function checks whether the DTMC is an irreducible.
+</p>
+
+
+<h3>Value</h3>
+
+<p>return True if all state in states are in the same class. Otherwise, return False.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+if (is.class(P)) {
+   print("The DTMC is irreducible.")
+}
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

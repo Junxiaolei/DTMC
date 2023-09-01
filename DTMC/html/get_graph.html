@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Get the corresponding graph</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for get_graph {DTMC}"><tr><td>get_graph {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Get the corresponding graph</h2>
+
+<h3>Description</h3>
+
+<p>Get the corresponding graph of this discrete Markov chain.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+get_graph(P)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>transition matrix P</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Discrete Markov chains can be represented by weighted graphs of graph theory. That is, states are vertices of graphs. If a state i can reach a state j through a one-step transfer (j can be equal to i), there will be a directed line from state i to state j.  The weight is the transition probability from state i to state j. This function converts the discrete Markov chain through the <code>igraph</code> package into a graph object in the <code>igraph</code> package. The user can use this object to process it using a function in the <code>igraph</code> package.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a graph object of <code>igraph</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+g &lt;- get_graph(P)
+print(g)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

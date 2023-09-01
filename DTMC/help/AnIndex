@@ -1,0 +1,17 @@
+Abprob	Abprob
+CKequ	CKequ
+classify	classify
+class_info	class_info
+DTMC	DTMC
+expect_DTMC	expect_DTMC
+get_graph	get_graph
+is.accessible	is.accessible
+is.class	is.class
+is.communicate	is.communicate
+is.DTMC	is.DTMC
+isTReversible	isTReversible
+LongRunP	LongRunP
+plot_graph	plot_graph
+RevChain	RevChain
+runif_DTMC	runif_DTMC
+TranTime	TranTime

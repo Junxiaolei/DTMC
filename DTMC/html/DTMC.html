@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: DTMC: A package for finite discrete markov chain to solve...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for DTMC {DTMC}"><tr><td>DTMC {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>DTMC: A package for finite discrete markov chain to solve stochastic problems.</h2>
+
+<h3>Description</h3>
+
+<p>Introduction: The main goals of DTMC package include:
+</p>
+
+<ol>
+<li><p> Judge whether a stochastic process is a discrete time Markov chain.
+</p>
+</li>
+<li><p> Classification of states in the Markov chain, like transient or recurrent, accessible or communicate.
+</p>
+</li>
+<li><p> Calculation of transition probabilities, long-run proportions, future expectations, and so on.
+</p>
+</li>
+<li><p> Graphical visualization of the Markov chain.
+</p>
+</li></ol>
+
+
+
+<h3>Details</h3>
+
+<p>Formation of Probability Matrix
+Users can input a transition probability matrix and judge whether it is a valid DTMC by using <code>is.DTMC()</code>.
+Users can also choose to randomly generate a transition probability matrix which satisfies the requirements of a valid DTMC by using <code>runif_DTMC()</code>.
+</p>
+<p>Classification of States
+It is important to classify different states in a DTMC. To give a more direct response to users, the package provide some graphic visualizations to represent the Markov chain.
+If it is possible to change from state i to j, j is said to be accessible from i, and this can be checked by <code>is.accessible()</code>.
+If two states are accessible from each other, they are said to communicate, and this can be checked by <code>is.communicate()</code>.
+If all states in a Markov can communicate with other states, these states are said to form a class, and this can be checked by <code>is.class()</code>.
+If users want to have a graphical view of the relationship between different states, they can use <code>plot_graph()</code> to visualize the result.
+</p>
+<p>Statistical Calculation
+Transition probability from one state to another in n steps can be calculated by <code>CKequ()</code>.
+Calculate probabilities especially for absorbing states by using <code>Abprob()</code>.
+Since states can be classified as recurrent and transient. For transient states, users can get the average number of steps from transient i to state j by <code>TranTime()</code>.
+</p>
+<p>Long-run Behavior
+The DTMC is said to reach a stabilized condition if after infinite many steps, probability in each state follows certain distribution.
+If long-run proportions exist, for given probability mass function, the long-run expected value of the DTMC can be calculated by <code>expect_DTMC()</code> and a value will be returned.
+To compute the long-run proportions of all states in the Markov chain, users can use <code>LongRunP()</code> and a vector of probabilities will be returned.
+Suppose the process from state i to state j is the forward Markov chain, then the process from state j to state i is the backward chain. To compute the backward chain, users can use <code>RevChain()</code> and the reversed probability matrix will be returned.
+If the forward chain and backward chain satisfy certain properties under the stationary distribution, whether the process is time reversible can be checked by using <code>isTReversible()</code>.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

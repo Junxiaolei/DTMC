@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Check the accessibility of the state</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for is.accessible {DTMC}"><tr><td>is.accessible {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Check the accessibility of the state</h2>
+
+<h3>Description</h3>
+
+<p>Check whether state j is accessible from state i.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+is.accessible(P, i, j)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>transition matrix P or a block matrix P of the whole transition matrix</p>
+</td></tr>
+<tr valign="top"><td><code>i</code></td>
+<td>
+<p>initial state column number</p>
+</td></tr>
+<tr valign="top"><td><code>j</code></td>
+<td>
+<p>terminal state column number</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>That state j is accessible to state i means that there is a step from state i that is possible to move to state j. The state i should not equal to state j. If you want to verify that a state can return to itself, call <code>class_info()</code> to verify that the state is transient.
+</p>
+
+
+<h3>Value</h3>
+
+<p>return NA if i is equivalent with j, and return True if state j is accessible to state i. Otherwise, return False.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P &lt;- matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+if (is.accessible(P, 1, 3)) {
+   print(P[c(1, 3), c(1, 3)])
+}
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

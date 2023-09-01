@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>R: Introduce some discrete Markov chain methods to analyze a
+stochastic process</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Introduce some discrete Markov chain methods to analyze a
+stochastic process
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;DTMC&rsquo; version 0.9.1</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="Abprob.html">Abprob</a></td>
+<td>Calculating probability when the absorbing state is known Calculate the conditional probability of transferring n steps from state i to state j, given never entering absorb state in this n steps. In real life, there may be known discrete Markov chains that never enter a state k1, k2...  This function can help calculate the conditional probability of moving from state i to state j in n steps in this case.  All we need to do is considering the states k1,k2... as absorbing state to put into this function and enter the transition matrix P and state i and state j.  The function outputs the final probability. If absorbing state contain state i or j, the function will return the probability of having entered the absorbing states in these n steps.</td></tr>
+<tr><td style="width: 25%;"><a href="CKequ.html">CKequ</a></td>
+<td>Champman-Kolmogorov Equations</td></tr>
+<tr><td style="width: 25%;"><a href="classify.html">classify</a></td>
+<td>Classification of a class of states</td></tr>
+<tr><td style="width: 25%;"><a href="class_info.html">class_info</a></td>
+<td>Get class information</td></tr>
+<tr><td style="width: 25%;"><a href="DTMC.html">DTMC</a></td>
+<td>DTMC: A package for finite discrete markov chain to solve stochastic problems.</td></tr>
+<tr><td style="width: 25%;"><a href="expect_DTMC.html">expect_DTMC</a></td>
+<td>Compute the expectation.</td></tr>
+<tr><td style="width: 25%;"><a href="get_graph.html">get_graph</a></td>
+<td>Get the corresponding graph</td></tr>
+<tr><td style="width: 25%;"><a href="is.accessible.html">is.accessible</a></td>
+<td>Check the accessibility of the state</td></tr>
+<tr><td style="width: 25%;"><a href="is.class.html">is.class</a></td>
+<td>Class Check</td></tr>
+<tr><td style="width: 25%;"><a href="is.communicate.html">is.communicate</a></td>
+<td>Check the communicativeness of the state Check whether state i and state j are communicative. That state i and state j are communicative means that there is a step from state i that is possible to move to state j and there is a step from state j that is possible to move to state i. The state i should not equal to state j. If you want to verify that a state can return to itself, call 'class_info()' to verify that the state is transient.</td></tr>
+<tr><td style="width: 25%;"><a href="is.DTMC.html">is.DTMC</a></td>
+<td>Check whether the matrix is valid</td></tr>
+<tr><td style="width: 25%;"><a href="isTReversible.html">isTReversible</a></td>
+<td>Judge whether the Markov chain is time reversible</td></tr>
+<tr><td style="width: 25%;"><a href="LongRunP.html">LongRunP</a></td>
+<td>Long-run proportion</td></tr>
+<tr><td style="width: 25%;"><a href="plot_graph.html">plot_graph</a></td>
+<td>Plot a graph</td></tr>
+<tr><td style="width: 25%;"><a href="RevChain.html">RevChain</a></td>
+<td>Get the reversed Markov chain</td></tr>
+<tr><td style="width: 25%;"><a href="runif_DTMC.html">runif_DTMC</a></td>
+<td>Create a transition matrix randomly.</td></tr>
+<tr><td style="width: 25%;"><a href="TranTime.html">TranTime</a></td>
+<td>Mean time spent in transient states</td></tr>
+</table>
+</div></body></html>

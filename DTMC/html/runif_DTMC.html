@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Create a transition matrix randomly.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for runif_DTMC {DTMC}"><tr><td>runif_DTMC {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Create a transition matrix randomly.</h2>
+
+<h3>Description</h3>
+
+<p><code>runif_DTMC</code> creates a valid probability transition matrix randomly.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+runif_DTMC(nrow = 3)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>nrow</code></td>
+<td>
+<p>the desired number of rows (or columns) in the square matrix. Must be finite. The default value is 3.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The matrix randomly generated must be valid probability transition matrix. It must be finite and non-negative, with each of the row sum being 1.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The random probability transition matrix generated.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+(P &lt;- runif_DTMC(nrow = 5))
+is.DTMC(P)
+rowSums(P)
+colSums(P)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

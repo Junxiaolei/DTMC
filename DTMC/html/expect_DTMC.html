@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Compute the expectation.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for expect_DTMC {DTMC}"><tr><td>expect_DTMC {DTMC}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Compute the expectation.</h2>
+
+<h3>Description</h3>
+
+<p><code>expect_DTMC</code> computes the expectation of markov chain with the given state real value. It also allows the user to input a function with respect to state true value.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+expect_DTMC(P, state_value = 1:nrow(P), FUN = function(x) x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>P</code></td>
+<td>
+<p>a transition probability matrix</p>
+</td></tr>
+<tr valign="top"><td><code>state_value</code></td>
+<td>
+<p>the real value of each state. Must be finite vector, same size with <em>nrow(P)</em>. The default value is columns numbers of states</p>
+</td></tr>
+<tr valign="top"><td><code>FUN</code></td>
+<td>
+<p>a function object whose input is the real value of state. The default value is <code>function(x) x</code></p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>If the expectation is finite, the expect value E(g(x)) will be returned, where x is the input real value of states and g(x) is the input FUN. While Function is unbounded, the expectation will be shown as &quot;does not exist&quot; rather than returned as <strong>Inf</strong>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The expectation value of the markov chain with given function <code>FUN</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+P = matrix(c(0.3, 0.3, 0.4, 0.1, 0.2, 0.7, 0, 0.2, 0.8), byrow = TRUE, nrow = 3)
+state_value = c(2, 4, 6)
+FUN = (function(x) x^2)
+expect_DTMC(P, state_value, FUN)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>DTMC</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>
